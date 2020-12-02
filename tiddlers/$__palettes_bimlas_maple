@@ -1,7 +1,7 @@
-alert-background: #ffe476
-alert-border: #b99e2f
-alert-highlight: #881122
-alert-muted-foreground: #b99e2f
+alert-background: #ece1b7
+alert-border: #b58900
+alert-highlight: #dc322f
+alert-muted-foreground: #b58900
 background: #fdf6e3
 blockquote-bar: <<colour muted-foreground>>
 button-background: 
@@ -44,20 +44,20 @@ modal-border: #999999
 modal-footer-background: #f5f5f5
 modal-footer-border: #dddddd
 modal-header-border: #eeeeee
-muted-foreground: #bbb
+muted-foreground: #b0b0b0
 notification-background: #ffffdd
 notification-border: #999999
 page-background: #f4e3b0
 pre-background: <<colour page-background>>
 pre-border: #cccccc
-primary: #5778d8
+primary: #859900
 sidebar-button-foreground: <<colour foreground>>
-sidebar-controls-foreground-hover: #000000
-sidebar-controls-foreground: #aaaaaa
+sidebar-controls-foreground-hover: #b7c846
+sidebar-controls-foreground: #859900
 sidebar-foreground-shadow: rgba(255,255,255, 0.8)
 sidebar-foreground: <<colour tiddler-foreground>>
 sidebar-muted-foreground-hover: #444444
-sidebar-muted-foreground: #c0c0c0
+sidebar-muted-foreground: #b0b0b0
 sidebar-tab-background-selected: #fff4cb
 sidebar-tab-background: #ece1b7
 sidebar-tab-border-selected: <<colour tab-border-selected>>
@@ -67,7 +67,7 @@ sidebar-tab-foreground-selected:
 sidebar-tab-foreground: <<colour tab-foreground>>
 sidebar-tiddler-link-foreground-hover: #444444
 sidebar-tiddler-link-foreground: #888888
-site-title-foreground: #444444
+site-title-foreground: #83691b
 static-alert-foreground: #aaaaaa
 tab-background-selected: #ffffff
 tab-background: #d8d8d8
@@ -84,7 +84,7 @@ tag-foreground: #ffffff
 tiddler-background: <<colour background>>
 tiddler-border: <<colour background>>
 tiddler-controls-foreground-hover: #888888
-tiddler-controls-foreground-selected: #444444
+tiddler-controls-foreground-selected: #cb4b16
 tiddler-controls-foreground: #cccccc
 tiddler-editor-background: #f8f8f8
 tiddler-editor-border-image: #ffffff
