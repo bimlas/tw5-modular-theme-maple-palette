@@ -1,5 +1,5 @@
 caption: Woody
-components: $:/bimlas/modular-components/extra-shadows $:/bimlas/modular-components/links $:/bimlas/modular-components/resize-embedded-content $:/bimlas/modular-components/round-corners $:/bimlas/modular-components/highlightjs-background $:/bimlas/modular-components/headline-color $:/bimlas/modular-components/centralised $:/bimlas/modular-components/fancy-text
+components: $:/bimlas/modular-components/extra-shadows $:/bimlas/modular-components/links $:/bimlas/modular-components/resize-embedded-content $:/bimlas/modular-components/round-corners $:/bimlas/modular-components/highlightjs-background $:/bimlas/modular-components/headline-color $:/bimlas/modular-components/centralised $:/bimlas/modular-components/fancy-text $:/bimlas/modular-components/sidebar-background
 created: 20201130140536866
 links/color-external: #66c2ee
 links/color-missing: #eecc66
@@ -8,7 +8,8 @@ links/color-shadow: #eecc66
 links/highlight-open-tiddlers: yes
 links/indicate-tiddler-type-in-link: yes
 links/underline-links: yes
-modified: 20201202094026940
+modified: 20201202102849789
+sidebar-background/color: #fff4cb
 tags: $:/themes/modular/theme
 title: $:/config/bimlas/modular/themes/Woody
 type: text/vnd.tiddlywiki

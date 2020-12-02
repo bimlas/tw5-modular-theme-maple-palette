@@ -1,0 +1,7 @@
+created: 20201202101757661
+modified: 20201202102110619
+tags: 
+title: $:/bimlas/modular-components/sidebar-background/config
+type: text/vnd.tiddlywiki
+
+|Background color |<$edit-text tiddler=<<theme>> field="sidebar-background/color" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-background>>`// |

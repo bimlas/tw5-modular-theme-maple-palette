@@ -1,0 +1,17 @@
+caption: Add background to sidebar (to use with wallpapers)
+created: 20201202101414626
+modified: 20201202102743065
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/sidebar-background
+type: text/vnd.tiddlywiki
+
+<$set name="color" tiddler=<<theme>> field="sidebar-background/color" emptyValue=<<colour tiddler-background>>>
+
+.tc-sidebar-lists {
+  background-color: <<color>>;
+  padding: 10px 0px 10px 10px;
+  border: none;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+</$set>
