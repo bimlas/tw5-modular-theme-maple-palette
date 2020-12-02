@@ -16,6 +16,8 @@ A component is a stylesheet (CSS) tiddler that affects a very narrow topic, it c
 
 You can turn any of your stylesheet tiddlers into components by adding the <<tag $:/themes/modular/components>> tag instead of <<tag $:/tags/Stylesheet>> and specifying the `caption` (readable name) field.
 
+The advantage of this solution over regular stylesheet tiddlers is that you can turn off each custom stylesheet at once by switching to another theme from Modular, without having to remove the <<tag $:/tags/Stylesheet>> tag from the stylsheet tiddlers individually.
+
 If you also want to add a configuration or description, create a tiddler with the `/config` suffix. For example, the `$:/user/my-style` stylesheet configuration tiddler is `$:/user/my-style/config`. This tiddler will be transcluded to the settings page.
 
 You can set the values in the configuration tiddler in this form:
