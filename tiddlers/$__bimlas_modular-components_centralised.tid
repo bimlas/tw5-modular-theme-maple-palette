@@ -1,6 +1,6 @@
 caption: Centralise story river
 created: 20201129112829376
-modified: 20201202130003417
+modified: 20201202131614822
 tags: $:/themes/modular/components
 title: $:/bimlas/modular-components/centralised
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 
 /* Copy from $:/themes/tiddlywiki/centralised/styles.tid */
 
-<$set name="story-width" filter="[<theme>get[centralised/story-width]]" emptyValue="1200px">
+<$set name="story-width" filter="[<theme>get[centralised.story-width]]" emptyValue="1200px">
 <$list filter="[list[$:/_sq/Stories/Story2StoryList]first[]]" variable="null" emptyMessage="""
 
 @media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {

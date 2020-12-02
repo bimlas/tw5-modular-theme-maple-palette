@@ -1,0 +1,15 @@
+created: 20201202131252453
+modified: 20201202131408441
+tags: 
+title: $:/bimlas/modular-components/highlightjs-background/config
+type: text/vnd.tiddlywiki
+
+!!! Examples
+
+```
+console.log("Default code block");
+```
+
+```javascript
+console.log("Highlight.js code block");
+```
