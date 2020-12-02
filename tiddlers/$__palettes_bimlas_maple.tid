@@ -1,6 +1,6 @@
 created: 20180821055506419
 description: Wood-like theme using mostly Solarized Light colors
-modified: 20201202195705183
+modified: 20201202203652435
 name: Maple
 tags: $:/tags/Palette
 title: $:/palettes/bimlas/maple
@@ -15,7 +15,7 @@ blockquote-bar: <<colour muted-foreground>>
 button-background: #ece1b7
 button-foreground: <<colour foreground>>
 button-border: #d0c495
-code-background: <<colour pre-background>>
+code-background: #f5eed1
 code-border: <<colour code-background>>
 code-foreground: #dc322f
 diff-delete-background: #ffc9c9
@@ -34,7 +34,7 @@ dragger-foreground: <<colour background>>
 dropdown-background: <<colour background>>
 dropdown-border: <<colour muted-foreground>>
 dropdown-tab-background-selected: #fff
-dropdown-tab-background: #ececec
+dropdown-tab-background: #fffdfc
 dropzone-background: rgba(0,200,0,0.7)
 external-link-background-hover: inherit
 external-link-background-visited: inherit
@@ -66,27 +66,27 @@ sidebar-foreground-shadow: rgba(255,255,255, 0.8)
 sidebar-foreground: <<colour tiddler-foreground>>
 sidebar-muted-foreground-hover: #444444
 sidebar-muted-foreground: #b0b0b0
-sidebar-tab-background-selected: #fff4cb
-sidebar-tab-background: #ece1b7
-sidebar-tab-border-selected: <<colour tab-border-selected>>
-sidebar-tab-border: <<colour tab-border>>
-sidebar-tab-divider: #e4e4e4
+sidebar-tab-background-selected: transparent
+sidebar-tab-background: #e6d7a7
+sidebar-tab-border-selected: #e6d7a7
+sidebar-tab-border: #e6d7a7
+sidebar-tab-divider: #e6d7a7
 sidebar-tab-foreground-selected: 
 sidebar-tab-foreground: <<colour tab-foreground>>
 sidebar-tiddler-link-foreground-hover: #444444
 sidebar-tiddler-link-foreground: #888888
 site-title-foreground: #d46818
 static-alert-foreground: #aaaaaa
-tab-background-selected: #ffffff
-tab-background: #d8d8d8
-tab-border-selected: #d8d8d8
-tab-border: #cccccc
-tab-divider: #d8d8d8
+tab-background-selected: transparent
+tab-background: #e6d7a7
+tab-border-selected: #e6d7a7
+tab-border: #e6d7a7
+tab-divider: #e6d7a7
 tab-foreground-selected: <<colour tab-foreground>>
 tab-foreground: #666666
-table-border: #dddddd
+table-border: #e6d7a7
 table-footer-background: #a8a8a8
-table-header-background: #f0f0f0
+table-header-background: #fffdfc
 tag-background: #ec6
 tag-foreground: #ffffff
 tiddler-background: <<colour background>>
@@ -99,9 +99,9 @@ tiddler-editor-border-image: #ffffff
 tiddler-editor-border: #cccccc
 tiddler-editor-fields-even: #e0e8e0
 tiddler-editor-fields-odd: #f0f4f0
-tiddler-info-background: #f8f8f8
-tiddler-info-border: #dddddd
-tiddler-info-tab-background: #f8f8f8
+tiddler-info-background: #fffdfc
+tiddler-info-border: #e6d7a7
+tiddler-info-tab-background: #fffdfc
 tiddler-link-background: inherit
 tiddler-link-foreground: #b58900
 tiddler-subtitle-foreground: #808080
