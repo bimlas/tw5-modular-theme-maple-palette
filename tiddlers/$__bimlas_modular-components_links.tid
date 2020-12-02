@@ -1,17 +1,17 @@
 caption: Links
 created: 20201123134758712
-modified: 20201202094026820
+modified: 20201202130003501
 tags: $:/themes/modular/components
 title: $:/bimlas/modular-components/links
 type: text/vnd.tiddlywiki
 
-<$set name="color-open" tiddler=<<theme>> field="links/color-open" emptyValue=<<colour tiddler-link-foreground>>>
-<$set name="color-missing" tiddler=<<theme>> field="links/color-missing" emptyValue=<<colour tiddler-link-foreground>>>
-<$set name="color-shadow" tiddler=<<theme>> field="links/color-shadow" emptyValue=<<colour tiddler-link-foreground>>>
-<$set name="color-overridden-shadow" tiddler=<<theme>> field="links/color-overridden-shadow" emptyValue=<<colour dirty-indicator>>>
-<$set name="color-external"  tiddler=<<theme>> field="links/color-external" emptyValue=<<colour external-link-foreground>>>
+<$set name="color-open" tiddler=<<theme>> field="links.color-open" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-missing" tiddler=<<theme>> field="links.color-missing" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-shadow" tiddler=<<theme>> field="links.color-shadow" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-overridden-shadow" tiddler=<<theme>> field="links.color-overridden-shadow" emptyValue=<<colour dirty-indicator>>>
+<$set name="color-external"  tiddler=<<theme>> field="links.color-external" emptyValue=<<colour external-link-foreground>>>
 
-<$list filter="[<theme>get[links/underline-links]match[yes]]" variable="null">
+<$list filter="[<theme>get[links.underline-links]match[yes]]" variable="null">
   /* Link style borrowed from https://www.wired.com/ */
   a {
     -o-transition: 0.3s;
@@ -41,7 +41,7 @@ type: text/vnd.tiddlywiki
   }
 </$list>
 
-<$list filter="[<theme>get[links/indicate-tiddler-type-in-link]match[yes]]">
+<$list filter="[<theme>get[links.indicate-tiddler-type-in-link]match[yes]]">
   .tc-tiddler-body a.tc-tiddlylink-missing, .tc-tiddler-body a.tc-tiddlylink-missing:visited {
     border-bottom-color: <<color-missing>>;
   }
@@ -54,8 +54,8 @@ type: text/vnd.tiddlywiki
   }
 </$list>
 
-<$list filter="[<theme>get[links/underline-links]match[yes]]" variable="null">
-  <$list filter="[<theme>get[links/indicate-tiddler-type-in-link]match[yes]]">
+<$list filter="[<theme>get[links.underline-links]match[yes]]" variable="null">
+  <$list filter="[<theme>get[links.indicate-tiddler-type-in-link]match[yes]]">
     .tc-tiddler-frame a.tc-tiddlylink-missing:hover, .tc-tiddler-frame a.tc-tiddlylink-missing:visited:hover {
       background-color: <<color-missing>>;
     }
@@ -68,7 +68,7 @@ type: text/vnd.tiddlywiki
   </$list>
 </$list>
 
-<$list filter="[<theme>get[links/highlight-open-tiddlers]match[yes]]" variable="null">
+<$list filter="[<theme>get[links.highlight-open-tiddlers]match[yes]]" variable="null">
   <$list filter="[list[$:/StoryList]] [list[$:/_sq/Stories/Story2StoryList]] +[encodeuricomponent[]addprefix[#]]">
     .tc-tiddler-body a[href="<$view field="title"/>"],
     .tc-drop-down a[href="<$view field="title"/>"],

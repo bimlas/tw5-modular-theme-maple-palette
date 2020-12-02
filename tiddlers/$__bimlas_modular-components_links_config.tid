@@ -1,18 +1,18 @@
 created: 20201130102439874
-modified: 20201202094026847
+modified: 20201202130003572
 tags: 
 title: $:/bimlas/modular-components/links/config
 type: text/vnd.tiddlywiki
 
-|Highlight links to open tiddlers |<$select tiddler=<<theme>> field="links/highlight-open-tiddlers" default="no"><option value="no">No</option><option value="yes">Yes</option></$select> |
-|Underline links instead of change the color of the text |<$select tiddler=<<theme>> field="links/underline-links" default="no"><option value="no">No</option><option value="yes">Yes</option></$select> |
-|Indicate the type of linked tiddler by the color and shape of the underline |<$select tiddler=<<theme>> field="links/indicate-tiddler-type-in-link" default="no"><option value="no">No</option><option value="yes">Yes</option></$select> |
+|Highlight links to open tiddlers |<$select tiddler=<<theme>> field="links.highlight-open-tiddlers" default="no"><option value="no">No</option><option value="yes">Yes</option></$select> |
+|Underline links instead of change the color of the text |<$select tiddler=<<theme>> field="links.underline-links" default="no"><option value="no">No</option><option value="yes">Yes</option></$select> |
+|Indicate the type of linked tiddler by the color and shape of the underline |<$select tiddler=<<theme>> field="links.indicate-tiddler-type-in-link" default="no"><option value="no">No</option><option value="yes">Yes</option></$select> |
 
 !!! Examples
 
 |!Link description |!Link appearance |!Color of underline |
-|To a tiddler that exists (open to see an example of opened tiddler) |<$link to={{{ [all[tiddlers]!is[system]first[]] }}}>~LikeThis</$link> |<$edit-text tiddler=<<theme>> field="links/color-open" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
-|To a tiddler that doesn't exist |[[LikeThis|ATiddlerThatDoesntExist]] |<$edit-text tiddler=<<theme>> field="links/color-missing" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
-|To a shadow tiddler that has not been overridden |[[LikeThis|$:/core/copyright.txt]] |<$edit-text tiddler=<<theme>> field="links/color-shadow" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
-|To a shadow tiddler that has been overridden by an ordinary tiddler |[[LikeThis|$:/SiteTitle]] |<$edit-text tiddler=<<theme>> field="links/color-overridden-shadow" default="" tag="input"/><br/>//Defaults to `<<colour dirty-indicator>>`// |
-|External link |[[LikeThis|https://tiddlywiki.com/]] |<$edit-text tiddler=<<theme>> field="links/color-external" default="" tag="input"/><br/>//Defaults to `<<colour external-link-foreground>>`// |
+|To a tiddler that exists (open to see an example of opened tiddler) |<$link to={{{ [all[tiddlers]!is[system]first[]] }}}>~LikeThis</$link> |<$edit-text tiddler=<<theme>> field="links.color-open" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
+|To a tiddler that doesn't exist |[[LikeThis|ATiddlerThatDoesntExist]] |<$edit-text tiddler=<<theme>> field="links.color-missing" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
+|To a shadow tiddler that has not been overridden |[[LikeThis|$:/core/copyright.txt]] |<$edit-text tiddler=<<theme>> field="links.color-shadow" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
+|To a shadow tiddler that has been overridden by an ordinary tiddler |[[LikeThis|$:/SiteTitle]] |<$edit-text tiddler=<<theme>> field="links.color-overridden-shadow" default="" tag="input"/><br/>//Defaults to `<<colour dirty-indicator>>`// |
+|External link |[[LikeThis|https://tiddlywiki.com/]] |<$edit-text tiddler=<<theme>> field="links.color-external" default="" tag="input"/><br/>//Defaults to `<<colour external-link-foreground>>`// |

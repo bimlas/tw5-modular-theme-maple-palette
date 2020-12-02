@@ -14,7 +14,7 @@ type: text/vnd.tiddlywiki
 
 \define button-disable-component()
   <$button class="tc-btn-invisible tc-tiddlylink">
-  	<$action-listops $tiddler=<<theme>> $field="components" $subfilter="-[all[current]]"/>
+    <$action-listops $tiddler=<<theme>> $field="components" $subfilter="-[all[current]]"/>
     {{$:/core/images/done-button}} Enabled for current theme
   </$button>
 \end
@@ -27,15 +27,15 @@ type: text/vnd.tiddlywiki
 
 \define button-export-component()
   <$button class="tc-btn-invisible tc-tiddlylink">
-  	<$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="""[[$(currentTiddler)$]] [[$(currentTiddler)$/config]]""" filename="tw5-modular-component.json"/>
-  	{{$:/core/images/export-button}}
+    <$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="""[[$(currentTiddler)$]] [[$(currentTiddler)$/config]]""" filename="tw5-modular-component.json"/>
+    {{$:/core/images/export-button}}
   </$button>
 \end
 
 \define button-export-theme()
   <$button class="tc-btn-invisible tc-tiddlylink">
-  	<$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="""[[$(theme)$]] [[$(theme)$]each:list-item[components]] [[$(theme)$]each:list-item[components]addsuffix[/config]]""" filename="tw5-modular-theme.json"/>
-  	{{$:/core/images/export-button}}
+    <$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="""[[$(theme)$]] [[$(theme)$]each:list-item[components]] [[$(theme)$]each:list-item[components]addsuffix[/config]]""" filename="tw5-modular-theme.json"/>
+    {{$:/core/images/export-button}}
   </$button>
 \end
 
@@ -54,7 +54,7 @@ See [[$:/themes/bimlas/modular/README]] for details.
 
 <$vars theme={{$:/config/bimlas/modular/theme}}>
 
-! <$link to=<<theme>>>Current theme</$link> 
+! <$link to=<<theme>>>Current theme</$link>
 
 |Current theme |{{$:/themes/bimlas/modular/theme-selector}} <<button-export-theme>> |
 |Create a new theme ("Default" for example) |<$edit-text tiddler="$:/temp/bimlas/modular/new-theme-title" default="" tag="input"/> <$button actions=<<create-new-theme>>>Create</$button> |
@@ -74,9 +74,9 @@ See [[$:/themes/bimlas/modular/README]] for details.
 <$list filter="[all[tiddlers+shadows]tag[$:/themes/modular/components]]">
   <$list filter="[all[current]addsuffix[/config]is[tiddler]] [all[current]addsuffix[/config]is[shadow]] +[first[]]" variable="config">
 
-  	!! <<component-config-title>>
-  
-		<$transclude tiddler=<<config>>/>
+    !! <<component-config-title>>
+
+    <$transclude tiddler=<<config>>/>
 
   </$list>
 </$list>

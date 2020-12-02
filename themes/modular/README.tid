@@ -1,6 +1,6 @@
 created: 20201201225601140
 modified: 20201202084645863
-tags: 
+tags:
 title: $:/themes/bimlas/modular/README
 type: text/vnd.tiddlywiki
 
@@ -21,16 +21,16 @@ If you also want to add a configuration or description, create a tiddler with th
 You can set the values in the configuration tiddler in this form:
 
 ```
-|Width |<$edit-text tiddler=<<theme>> field="my-style/width" default="" tag="input"/> |
-|Height |<$edit-text tiddler=<<theme>> field="my-style/height" default="" tag="input"/> (Defaults to 123) |
+|Width |<$edit-text tiddler=<<theme>> field="my-style.width" default="" tag="input"/> |
+|Height |<$edit-text tiddler=<<theme>> field="my-style.height" default="" tag="input"/> (Defaults to 123) |
 ```
 
 Here's how to use the configuration values in the stylesheet with and without default values (don't forget to remove the "text/css" tiddler type, otherwise TiddlyWiki will not interpret the operators):
 
 ```css
-<$set name="height" tiddler=<<theme>> field="my-style/height" emptyValue="123">
+<$set name="height" tiddler=<<theme>> field="my-style.height" emptyValue="123">
 .my-element-selector {
-  width: {{{ [<theme>get[my-style/width]] }}};
+  width: {{{ [<theme>get[my-style.width]] }}};
   height: <<height>>;
 }
 </$set>
