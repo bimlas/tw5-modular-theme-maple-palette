@@ -1,0 +1,18 @@
+caption: Open tiddler links
+created: 20201202191908051
+modified: 20201202193440069
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/open-tiddler-links
+type: text/vnd.tiddlywiki
+
+<$set name="color" tiddler=<<theme>> field="open-tiddler-links.color" emptyValue=<<colour tiddler-link-foreground>>>
+
+<$list filter="[list[$:/StoryList]] [list[$:/_sq/Stories/Story2StoryList]] +[encodeuricomponent[]addprefix[#]]">
+  .tc-tiddler-body a[href="<$view field="title"/>"],
+  .tc-drop-down a[href="<$view field="title"/>"],
+  .tc-block-dropdown a[href="<$view field="title"/>"] {
+    background-color: <<color>>;
+  }
+</$list>
+
+</$set>

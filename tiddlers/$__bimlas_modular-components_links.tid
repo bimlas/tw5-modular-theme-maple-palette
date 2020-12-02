@@ -1,11 +1,11 @@
 caption: Links
 created: 20201123134758712
-modified: 20201202130003501
+modified: 20201202193440009
 tags: $:/themes/modular/components
 title: $:/bimlas/modular-components/links
 type: text/vnd.tiddlywiki
 
-<$set name="color-open" tiddler=<<theme>> field="links.color-open" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-internal" tiddler=<<theme>> field="links.color-internal" emptyValue=<<colour tiddler-link-foreground>>>
 <$set name="color-missing" tiddler=<<theme>> field="links.color-missing" emptyValue=<<colour tiddler-link-foreground>>>
 <$set name="color-shadow" tiddler=<<theme>> field="links.color-shadow" emptyValue=<<colour tiddler-link-foreground>>>
 <$set name="color-overridden-shadow" tiddler=<<theme>> field="links.color-overridden-shadow" emptyValue=<<colour dirty-indicator>>>
@@ -23,10 +23,10 @@ type: text/vnd.tiddlywiki
   .tc-tiddler-body a.tc-tiddlylink {
     text-decoration: none;
     color: inherit;
-    border-bottom: 3px solid <<color-open>>;
+    border-bottom: 3px solid <<color-internal>>;
   }
   .tc-tiddler-frame a.tc-tiddlylink:hover, .tc-drop-down a.tc-tiddlylink:hover, .tc-block-dropdown a.tc-tiddlylink:hover {
-    background-color: <<color-open>>;
+    background-color: <<color-internal>>;
   }
   .tc-tiddler-body a.tc-tiddlylink-external, .tc-tiddler-body a.tc-tiddlylink-external:visited {
     text-decoration: none;
@@ -64,16 +64,6 @@ type: text/vnd.tiddlywiki
     }
     .tc-tiddler-frame a.tc-tiddlylink-shadow.tc-tiddlylink-resolves:hover, .tc-tiddler-frame a.tc-tiddlylink-shadow.tc-tiddlylink-resolves:visited:hover {
       background-color: <<color-overridden-shadow>>;
-    }
-  </$list>
-</$list>
-
-<$list filter="[<theme>get[links.highlight-open-tiddlers]match[yes]]" variable="null">
-  <$list filter="[list[$:/StoryList]] [list[$:/_sq/Stories/Story2StoryList]] +[encodeuricomponent[]addprefix[#]]">
-    .tc-tiddler-body a[href="<$view field="title"/>"],
-    .tc-drop-down a[href="<$view field="title"/>"],
-    .tc-block-dropdown a[href="<$view field="title"/>"] {
-      background-color: <<color-open>>;
     }
   </$list>
 </$list>

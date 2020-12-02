@@ -1,0 +1,10 @@
+created: 20201202192351054
+modified: 20201202193440077
+tags: 
+title: $:/bimlas/modular-components/open-tiddler-links/config
+type: text/vnd.tiddlywiki
+
+!!! Examples
+
+|!Link description |!Link appearance |!Background color |
+|Open the link first |<$link to={{{ [all[tiddlers]!is[system]first[]] }}}>~LikeThis</$link> |<$edit-text tiddler=<<theme>> field="open-tiddler-links.color" default="" tag="input"/><br/>//Defaults to `<<colour tiddler-link-foreground>>`// |
