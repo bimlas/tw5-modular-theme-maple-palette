@@ -1,0 +1,10 @@
+caption: Adjust the background color of Highlight.js codes to match the palette
+created: 20201201210640422
+modified: 20201202094026789
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/highlightjs-background
+type: text/vnd.tiddlywiki
+
+pre.hljs {
+  background-color: <<colour pre-background>>;
+}

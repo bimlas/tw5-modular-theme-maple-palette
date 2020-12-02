@@ -1,0 +1,11 @@
+created: 20201130101853161
+modified: 20201202094026639
+tags: 
+title: $:/bimlas/modular-components/centralised/config
+type: text/vnd.tiddlywiki
+
+<$list filter="[[$:/themes/tiddlywiki/vanilla/options/sidebarlayout]!contains:text[fluid-fixed]]" variable="null">
+''You have to set [[$:/ControlPanel]] -> Appereance -> Theme Tweaks -> Sidebar layout to "Fluid story, fixed sidebar" first!''
+</$list>
+
+|Story width |<$edit-text tiddler=<<theme>> field="centralised/story-width" default="" tag="input"/><br/>//Defaults to 1200px// |

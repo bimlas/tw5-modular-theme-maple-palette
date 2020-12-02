@@ -1,0 +1,17 @@
+caption: Round corners
+created: 20201123135109427
+modified: 20201202094026904
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/round-corners
+type: text/vnd.tiddlywiki
+
+.tc-tiddler-frame {
+  border-radius: 15px;
+}
+.tc-drop-down, .tc-block-dropdown {
+  border-radius: 8px;
+}
+pre, pre.hljs {
+  padding: 0.5rem;
+  border-radius: 10px;
+}

@@ -1,0 +1,20 @@
+caption: Stylish display of tiddler body
+created: 20201123135306697
+modified: 20201202094026706
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/fancy-text
+type: text/vnd.tiddlywiki
+
+blockquote {
+  font-style: italic;
+}
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+strike{
+  text-decoration: line-through;
+  /* CSS3 only */
+  text-decoration: <<colour dirty-indicator>> line-through;
+}

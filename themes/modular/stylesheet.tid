@@ -1,0 +1,13 @@
+created: 20201130085439071
+modified: 20201202084645877
+tags: $:/tags/Stylesheet
+title: $:/themes/bimlas/modular/stylesheet
+type: text/vnd.tiddlywiki
+
+<$vars theme={{$:/config/bimlas/modular/theme}}>
+<$list filter="[<theme>each:list-item[components]]">
+
+<$transclude/>
+
+</$list>
+</$vars>

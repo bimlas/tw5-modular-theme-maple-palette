@@ -1,0 +1,10 @@
+caption: Resize the embedded content (e.g. PDF files) to fill the height of the window
+created: 20201123134709346
+modified: 20201202094026872
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/resize-embedded-content
+type: text/vnd.tiddlywiki
+
+.tc-tiddler-body > embed {
+  height: 90vh;
+}

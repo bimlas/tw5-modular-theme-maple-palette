@@ -1,0 +1,41 @@
+caption: Centralise story river
+created: 20201129112829376
+modified: 20201202094026513
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/centralised
+type: text/vnd.tiddlywiki
+
+<$list filter="[[$:/themes/tiddlywiki/vanilla/options/sidebarlayout]contains:text[fluid-fixed]]" variable="null">
+
+/* Copy from $:/themes/tiddlywiki/centralised/styles.tid */
+
+<$set name="story-width" filter="[<theme>get[centralised/story-width]]" emptyValue="1200px">
+<$list filter="[list[$:/_sq/Stories/Story2StoryList]first[]]" variable="null" emptyMessage="""
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+  html .tc-page-container {
+    text-align: center;
+  }
+
+  html .tc-story-river {
+    position: relative;
+    width: <<story-width>>;
+    padding: 42px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  html .tc-sidebar-scrollable {
+    text-align: left;
+    width: auto;
+    left: 50%;
+    right: 0;
+    margin-left: calc(<<story-width>> / 2 - 40px);
+  }
+}
+
+"""></$list>
+</$set>
+
+</$list>

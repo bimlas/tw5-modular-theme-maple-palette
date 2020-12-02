@@ -1,0 +1,49 @@
+created: 20201201225601140
+modified: 20201202084645863
+tags: 
+title: $:/themes/bimlas/modular/README
+type: text/vnd.tiddlywiki
+
+The [[Modular theme|$:/themes/bimlas/modular]] makes individual style modifications (stylesheet components) optional, so you can enable each change individually to create the look that works best for you. For example, if you want to display tiddlers without borders and centered (Seamless + Centralized TiddlyWiki theme), just turn on the appropriate components.
+
+* https://bimlas.gitlab.io/tw5-modular-theme-maple-palette (demo + install)
+* https://gitlab.com/bimlas/tw5-modular-theme-maple-palette (main repository)
+* https://github.com/bimlas/tw5-modular-theme-maple-palette (mirror, ''please star if you like the plugin'')
+
+!! What is a theme component, how do I create it?
+
+A component is a stylesheet (CSS) tiddler that affects a very narrow topic, it can optionally contain adjustable values that you can set in the configuration.
+
+You can turn any of your stylesheet tiddlers into components by adding the <<tag $:/themes/modular/components>> tag instead of <<tag $:/tags/Stylesheet>> and specifying the `caption` (readable name) field.
+
+If you also want to add a configuration or description, create a tiddler with the `/config` suffix. For example, the `$:/user/my-style` stylesheet configuration tiddler is `$:/user/my-style/config`. This tiddler will be transcluded to the settings page.
+
+You can set the values in the configuration tiddler in this form:
+
+```
+|Width |<$edit-text tiddler=<<theme>> field="my-style/width" default="" tag="input"/> |
+|Height |<$edit-text tiddler=<<theme>> field="my-style/height" default="" tag="input"/> (Defaults to 123) |
+```
+
+Here's how to use the configuration values in the stylesheet with and without default values (don't forget to remove the "text/css" tiddler type, otherwise TiddlyWiki will not interpret the operators):
+
+```css
+<$set name="height" tiddler=<<theme>> field="my-style/height" emptyValue="123">
+.my-element-selector {
+  width: {{{ [<theme>get[my-style/width]] }}};
+  height: <<height>>;
+}
+</$set>
+```
+
+!! What is a theme inside the Modular theme?
+
+Because themes are actually a set of changes and settings, the configuration is stored in a summary theme file, so you can easily import this tiddler (i.e. the theme) + the components + the config tiddlers of components into other wikis. This way, you can have several different component settings that you can easily switch between. Just transclude [[$:/themes/bimlas/modular/theme-selector]] where you want to diplay the theme selector.
+
+!! Where is the configuration?
+
+[[$:/ControlPanel]] -> Appereance -> [[Modular theme|$:/themes/bimlas/modular/config]]
+
+!! How do I import themes and components into my own wiki?
+
+First of all import and switch to [[Modular theme|$:/themes/bimlas/modular]] by dragging this link to your wiki. To import a component, press the <button class="tc-btn-invisible tc-tiddlylink" disabled>{{$:/core/images/export-button}}</button> export button of it and drag the downloaded JSON file into your own wiki. If you like the current theme settings at all, you can import the theme in the same way by exporting "Current theme".

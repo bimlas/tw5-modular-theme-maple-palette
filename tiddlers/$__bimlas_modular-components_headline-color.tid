@@ -1,0 +1,10 @@
+caption: Display all headlines in tiddler-title-foreground color
+created: 20201123134922276
+modified: 20201202094026762
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/headline-color
+type: text/vnd.tiddlywiki
+
+.tc-tiddler-frame h1, .tc-tiddler-frame h2, .tc-tiddler-frame h3, .tc-tiddler-frame h4, .tc-tiddler-frame h5, .tc-tiddler-frame h6 {
+  color: <<colour tiddler-title-foreground>>;
+}

@@ -1,0 +1,30 @@
+caption: Extra shadows
+created: 20201129093830019
+modified: 20201202094026684
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/extra-shadows
+type: text/vnd.tiddlywiki
+
+.tc-tiddler-frame, .tc-drop-down, .tc-block-dropdown {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button.tc-tag-label, span.tc-tag-label {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.tc-tags-wrapper {
+  line-height: 28px;
+}
+
+pre, pre.hljs {
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+pre.CodeMirror-line {
+  box-shadow: none;
+}

@@ -1,0 +1,84 @@
+caption: Links
+created: 20201123134758712
+modified: 20201202094026820
+tags: $:/themes/modular/components
+title: $:/bimlas/modular-components/links
+type: text/vnd.tiddlywiki
+
+<$set name="color-open" tiddler=<<theme>> field="links/color-open" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-missing" tiddler=<<theme>> field="links/color-missing" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-shadow" tiddler=<<theme>> field="links/color-shadow" emptyValue=<<colour tiddler-link-foreground>>>
+<$set name="color-overridden-shadow" tiddler=<<theme>> field="links/color-overridden-shadow" emptyValue=<<colour dirty-indicator>>>
+<$set name="color-external"  tiddler=<<theme>> field="links/color-external" emptyValue=<<colour external-link-foreground>>>
+
+<$list filter="[<theme>get[links/underline-links]match[yes]]" variable="null">
+  /* Link style borrowed from https://www.wired.com/ */
+  a {
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .tc-tiddler-body a.tc-tiddlylink {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid <<color-open>>;
+  }
+  .tc-tiddler-frame a.tc-tiddlylink:hover, .tc-drop-down a.tc-tiddlylink:hover, .tc-block-dropdown a.tc-tiddlylink:hover {
+    background-color: <<color-open>>;
+  }
+  .tc-tiddler-body a.tc-tiddlylink-external, .tc-tiddler-body a.tc-tiddlylink-external:visited {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid <<color-external>>;
+  }
+  .tc-tiddler-frame a.tc-tiddlylink-external:hover, .tc-tiddler-frame a.tc-tiddlylink-external:visited:hover {
+    background-color: <<color-external>>;
+  }
+  .tc-drop-down a.tc-tiddlylink, .tc-drop-down a.tc-tiddlylink-external {
+    border-bottom: none;
+  }
+</$list>
+
+<$list filter="[<theme>get[links/indicate-tiddler-type-in-link]match[yes]]">
+  .tc-tiddler-body a.tc-tiddlylink-missing, .tc-tiddler-body a.tc-tiddlylink-missing:visited {
+    border-bottom-color: <<color-missing>>;
+  }
+  .tc-tiddler-body a.tc-tiddlylink-shadow, .tc-tiddler-body a.tc-tiddlylink-shadow:visited {
+    border-bottom-style: dashed;
+    border-bottom-color: <<color-shadow>>;
+  }
+  .tc-tiddler-body a.tc-tiddlylink-shadow.tc-tiddlylink-resolves, .tc-tiddler-body a.tc-tiddlylink-shadow.tc-tiddlylink-resolves:visited {
+    border-bottom-color: <<color-overridden-shadow>>;
+  }
+</$list>
+
+<$list filter="[<theme>get[links/underline-links]match[yes]]" variable="null">
+  <$list filter="[<theme>get[links/indicate-tiddler-type-in-link]match[yes]]">
+    .tc-tiddler-frame a.tc-tiddlylink-missing:hover, .tc-tiddler-frame a.tc-tiddlylink-missing:visited:hover {
+      background-color: <<color-missing>>;
+    }
+    .tc-tiddler-frame a.tc-tiddlylink-shadow:hover, .tc-tiddler-frame a.tc-tiddlylink-shadow:visited:hover {
+      background-color: <<color-shadow>>;
+    }
+    .tc-tiddler-frame a.tc-tiddlylink-shadow.tc-tiddlylink-resolves:hover, .tc-tiddler-frame a.tc-tiddlylink-shadow.tc-tiddlylink-resolves:visited:hover {
+      background-color: <<color-overridden-shadow>>;
+    }
+  </$list>
+</$list>
+
+<$list filter="[<theme>get[links/highlight-open-tiddlers]match[yes]]" variable="null">
+  <$list filter="[list[$:/StoryList]] [list[$:/_sq/Stories/Story2StoryList]] +[encodeuricomponent[]addprefix[#]]">
+    .tc-tiddler-body a[href="<$view field="title"/>"],
+    .tc-drop-down a[href="<$view field="title"/>"],
+    .tc-block-dropdown a[href="<$view field="title"/>"] {
+      background-color: <<color-open>>;
+    }
+  </$list>
+</$list>
+
+</$set>
+</$set>
+</$set>
+</$set>

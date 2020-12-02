@@ -1,0 +1,85 @@
+caption: Modular theme
+created: 20201128204206968
+modified: 20201202084645821
+tags: $:/tags/ControlPanel/Appearance
+title: $:/themes/bimlas/modular/config
+type: text/vnd.tiddlywiki
+
+\define button-enable-component()
+  <$button class="tc-btn-invisible tc-tiddlylink">
+    <$action-listops $tiddler=<<theme>> $field="components" $subfilter="[all[current]]"/>
+    {{$:/core/images/close-button}} Disabled for current theme
+  </$button>
+\end
+
+\define button-disable-component()
+  <$button class="tc-btn-invisible tc-tiddlylink">
+  	<$action-listops $tiddler=<<theme>> $field="components" $subfilter="-[all[current]]"/>
+    {{$:/core/images/done-button}} Enabled for current theme
+  </$button>
+\end
+
+\define create-new-theme()
+  <$action-createtiddler $basetitle={{{ [{$:/temp/bimlas/modular/new-theme-title}addprefix[$:/config/bimlas/modular/themes/]] }}} $template=<<theme>> tags="$:/themes/modular/theme" caption={{$:/temp/bimlas/modular/new-theme-title}} $savetitle="$:/temp/bimlas/modular/new-theme-tiddler"/>
+  <$action-setfield $tiddler="$:/config/bimlas/modular/theme" text={{$:/temp/bimlas/modular/new-theme-tiddler}}/>
+  <$action-deletetiddler $tiddler="$:/temp/bimlas/modular/new-theme-title"/>
+\end
+
+\define button-export-component()
+  <$button class="tc-btn-invisible tc-tiddlylink">
+  	<$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="""[[$(currentTiddler)$]] [[$(currentTiddler)$/config]]""" filename="tw5-modular-component.json"/>
+  	{{$:/core/images/export-button}}
+  </$button>
+\end
+
+\define button-export-theme()
+  <$button class="tc-btn-invisible tc-tiddlylink">
+  	<$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="""[[$(theme)$]] [[$(theme)$]each:list-item[components]] [[$(theme)$]each:list-item[components]addsuffix[/config]]""" filename="tw5-modular-theme.json"/>
+  	{{$:/core/images/export-button}}
+  </$button>
+\end
+
+\define component-list()
+  <tr>
+    <td><<component-title>></td>
+    <td><$list filter="[<theme>each:list-item[components]is[current]]" emptyMessage=<<button-enable-component>>><<button-disable-component>></$list></td>
+    <td><<button-export-component>></td>
+  </tr>
+\end
+
+\define component-title() <$link><$view field="caption"><$view field="title"/></$view></$link>
+\define component-config-title() <$link to=<<config>>><$view field="caption"><$view field="title"/></$view></$link>
+
+See [[$:/themes/bimlas/modular/README]] for details.
+
+<$vars theme={{$:/config/bimlas/modular/theme}}>
+
+! <$link to=<<theme>>>Current theme</$link> 
+
+|Current theme |{{$:/themes/bimlas/modular/theme-selector}} <<button-export-theme>> |
+|Create a new theme ("Default" for example) |<$edit-text tiddler="$:/temp/bimlas/modular/new-theme-title" default="" tag="input"/> <$button actions=<<create-new-theme>>>Create</$button> |
+
+<$list filter="[<theme>is[tiddler]] [<theme>is[shadow]] +[first[]]" variable="null" emptyMessage="''Select or create a theme first''">
+
+! Components
+
+<table>
+  <$list filter="[all[tiddlers+shadows]tag[$:/themes/modular/components]]" emptyMessage="<tr><td>''There are no components, create or import them''</td></tr>">
+    <<component-list>>
+  </$list>
+</table>
+
+! Component configurations
+
+<$list filter="[all[tiddlers+shadows]tag[$:/themes/modular/components]]">
+  <$list filter="[all[current]addsuffix[/config]is[tiddler]] [all[current]addsuffix[/config]is[shadow]] +[first[]]" variable="config">
+
+  	!! <<component-config-title>>
+  
+		<$transclude tiddler=<<config>>/>
+
+  </$list>
+</$list>
+
+</$list>
+</$vars>

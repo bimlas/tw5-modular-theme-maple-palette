@@ -1,0 +1,14 @@
+caption: Woody
+components: $:/bimlas/modular-components/extra-shadows $:/bimlas/modular-components/links $:/bimlas/modular-components/resize-embedded-content $:/bimlas/modular-components/round-corners $:/bimlas/modular-components/highlightjs-background $:/bimlas/modular-components/headline-color $:/bimlas/modular-components/centralised $:/bimlas/modular-components/fancy-text
+created: 20201130140536866
+links/color-external: #66c2ee
+links/color-missing: #eecc66
+links/color-open: #eecc66
+links/color-shadow: #eecc66
+links/highlight-open-tiddlers: yes
+links/indicate-tiddler-type-in-link: yes
+links/underline-links: yes
+modified: 20201202094026940
+tags: $:/themes/modular/theme
+title: $:/config/bimlas/modular/themes/Woody
+type: text/vnd.tiddlywiki

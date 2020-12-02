@@ -1,0 +1,11 @@
+created: 20201201224232455
+modified: 20201202084645891
+tags: 
+title: $:/themes/bimlas/modular/theme-selector
+type: text/vnd.tiddlywiki
+
+<$select tiddler="$:/config/bimlas/modular/theme">
+  <$list filter="[all[tiddlers+shadows]tag[$:/themes/modular/theme]]">
+    <option value=<<currentTiddler>>>{{!!caption}}</option>
+  </$list>
+</$select>
