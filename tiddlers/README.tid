@@ -1,9 +1,11 @@
 created: 20201202130537610
-modified: 20201202130957970
-tags:
+modified: 20201203054718731
+tags: 
 title: README
 type: text/vnd.tiddlywiki
 
 The site is intended to introduce the [[Modular|$:/themes/bimlas/modular]] theme and the [[Maple|$:/palettes/bimlas/maple]] palette for [[TiddlyWiki|https://tiddlywiki.com/]].
 
 Preferred wallpaper: [[$:/bimlas/background/background.jpg]]
+
+Feel free to write down your thoughts and suggestions, you can comment at the bottom of each tiddler ("Show Disqus comments").
