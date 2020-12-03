@@ -1,6 +1,6 @@
 created: 20180821055506419
 description: Wood-like theme using mostly Solarized Light colors
-modified: 20201202204534652
+modified: 20201203082828298
 name: Maple
 tags: $:/tags/Palette
 title: $:/palettes/bimlas/maple
@@ -40,7 +40,7 @@ external-link-background-hover: inherit
 external-link-background-visited: inherit
 external-link-background: inherit
 external-link-foreground-hover: inherit
-external-link-foreground-visited: inherit
+external-link-foreground-visited: #268bd2
 external-link-foreground: #268bd2
 foreground: #45575d
 message-background: #ecf2ff
