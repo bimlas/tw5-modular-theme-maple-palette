@@ -1,0 +1,8 @@
+caption: Flat
+centralised.story-width: 750px
+components: $:/bimlas/modular-components/centralised $:/bimlas/modular-components/fancy-text $:/bimlas/modular-components/headline-color $:/bimlas/modular-components/resize-embedded-content $:/bimlas/modular-components/highlightjs-background $:/bimlas/modular-components/seamless
+created: 20201203053929626
+modified: 20201203054346043
+tags: $:/themes/modular/theme
+title: $:/config/bimlas/modular/themes/Flat
+type: text/vnd.tiddlywiki
