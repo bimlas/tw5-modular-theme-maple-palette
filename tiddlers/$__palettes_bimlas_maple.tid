@@ -1,6 +1,6 @@
 created: 20180821055506419
 description: Wood-like theme using mostly Solarized Light colors
-modified: 20201203082828298
+modified: 20201206213044429
 name: Maple
 tags: $:/tags/Palette
 title: $:/palettes/bimlas/maple
@@ -93,7 +93,7 @@ tiddler-background: <<colour background>>
 tiddler-border: <<colour background>>
 tiddler-controls-foreground-hover: #888888
 tiddler-controls-foreground-selected: #cb4b16
-tiddler-controls-foreground: #cccccc
+tiddler-controls-foreground: #e6d7a7
 tiddler-editor-background: #f8f8f8
 tiddler-editor-border-image: #ffffff
 tiddler-editor-border: #cccccc
