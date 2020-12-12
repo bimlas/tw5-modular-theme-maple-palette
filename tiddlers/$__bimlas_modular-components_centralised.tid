@@ -1,6 +1,6 @@
 caption: Centralise story river
 created: 20201129112829376
-modified: 20201212201512599
+modified: 20201212203142612
 tags: $:/themes/modular/components
 title: $:/bimlas/modular-components/centralised
 type: text/vnd.tiddlywiki
@@ -22,7 +22,6 @@ type: text/vnd.tiddlywiki
     display: inline-block;
     width: min(<<story-width>>, 100% - {{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}});
     margin: auto;
-    padding: 42px;
     text-align: left;
   }
 
