@@ -6,9 +6,8 @@ type: text/vnd.tiddlywiki
 
 The [[Modular theme|$:/themes/bimlas/modular]] makes individual style modifications (stylesheet components) optional, so you can enable each change individually to create the look that works best for you. For example, if you want to display tiddlers without borders and centered (Seamless + Centralized TiddlyWiki theme), just turn on the appropriate components.
 
-* https://bimlas.gitlab.io/tw5-modular-theme-maple-palette (demo + install)
-* https://gitlab.com/bimlas/tw5-modular-theme-maple-palette (main repository)
-* https://github.com/bimlas/tw5-modular-theme-maple-palette (mirror, ''please star if you like the plugin'')
+* https://bimlas.github.io/tw5-modular-theme-maple-palette (demo + install)
+* https://github.com/bimlas/tw5-modular-theme-maple-palette (''please star if you like the plugin'')
 
 !! What is a theme component, how do I create it?
 

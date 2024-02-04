@@ -1,0 +1,7 @@
+{
+  "name": "tw5-modular-theme-maple-palette",
+  "author": "bimlas",
+  "dependencies": {
+    "tiddlywiki": "^5.3.3"
+  }
+}
