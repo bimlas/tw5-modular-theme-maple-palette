@@ -1,6 +1,9 @@
 {
   "name": "tw5-modular-theme-maple-palette",
   "author": "bimlas",
+  "scripts": {
+    "build": "tiddlywiki --build index"
+  },
   "dependencies": {
     "tiddlywiki": "^5.3.3"
   }
